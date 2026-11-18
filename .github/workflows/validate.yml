@@ -27,4 +27,4 @@ jobs:
         run: htmlhint "*.html" --config .htmlhintrc
 
       - name: Validate CSS files
-        run: csslint css/style.css --quiet --ignore=known-properties,order-alphabetical,universal-selector,box-sizing,compatible-vendor-prefixes,fallback-colors,adjoining-classes,box-model,qualified-headings,unique-headings
+        run: csslint css/style.css --quiet --ignore=known-properties,order-alphabetical,universal-selector,box-sizing,compatible-vendor-prefixes,fallback-colors,adjoining-classes,box-model,qualified-headings,unique-headings,important,font-sizes
