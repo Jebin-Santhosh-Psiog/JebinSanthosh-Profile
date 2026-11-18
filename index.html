@@ -3,39 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal profile of Jebin Santhosh J">
+  <meta name="description" content="Jebin Santhosh J — software engineer from Chennai working across full stack development, AI/ML and cloud.">
+  <meta name="theme-color" content="#14161c">
   <title>Jebin Santhosh J | Profile</title>
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <nav class="container nav-inner">
-      <a href="#hero" class="logo">JS</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner glass" aria-label="Main">
+      <a href="#hero" class="logo">Jebin<span>.</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#journey">Journey</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#family">Family</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#footer">Contact</a></li>
+        <li><a href="#footer" class="nav-cta">Contact</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
     </nav>
   </header>
 
   <main>
     <section id="hero" class="hero">
-      <div class="hero-content">
-        <img src="images/hero/profile.jpg" alt="Portrait of Jebin Santhosh J" class="hero-photo">
+      <div class="container hero-content">
+        <div class="avatar glass">
+          <img src="images/hero/profile.jpg" alt="Portrait of Jebin Santhosh J" class="hero-photo" width="168" height="168">
+        </div>
+        <p class="eyebrow">Software Engineer &middot; Chennai, India</p>
         <h1>Jebin Santhosh J</h1>
-        <p class="tagline">Full Stack Developer | AI/ML Enthusiast | Lifelong Learner</p>
-        <a href="#journey" class="btn">Explore My Journey &rarr;</a>
+        <p class="tagline"><span class="gradient-text">Full Stack Developer.</span> AI/ML Enthusiast. Lifelong Learner.</p>
+        <div class="hero-actions">
+          <a href="#journey" class="btn btn-primary">Explore My Journey &rarr;</a>
+          <a href="#footer" class="btn btn-glass glass">Get in touch</a>
+        </div>
+        <ul class="stats">
+          <li class="stat glass"><strong>4</strong><span>Internships</span></li>
+          <li class="stat glass"><strong>10+</strong><span>Certifications</span></li>
+          <li class="stat glass"><strong>1</strong><span>Research Paper</span></li>
+        </ul>
+      </div>
+      <a href="#journey" class="scroll-hint" aria-label="Scroll to Professional Journey"><span></span></a>
+    </section>
+
+    <section id="journey" class="journey">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Professional Journey</p>
+          <h2 class="section-title">Every step, one commit at a time.</h2>
+        </header>
+        <div class="journey-wrap">
+          <aside class="journey-sticky glass" aria-live="polite">
+            <p class="chapter-label">Chapter</p>
+            <p class="chapter-year" id="ch-year">2021</p>
+            <p class="chapter-title" id="ch-title">School Assistant School Pupil Leader</p>
+            <p class="chapter-org" id="ch-org">Boaz Public School</p>
+            <div class="chapter-foot">
+              <p class="chapter-count"><strong id="ch-idx">01</strong> / <span id="ch-total">09</span></p>
+              <div class="chapter-dots" id="ch-dots"></div>
+            </div>
+          </aside>
+          <div class="timeline">
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">2021</span>
+                <h3>School Assistant School Pupil Leader</h3>
+                <p class="org">Boaz Public School</p>
+                <p class="desc">Completed Class 12 (CBSE) in the Computer Science group while serving as Assistant School Pupil Leader, helping lead student activities and representing my school.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">2022</span>
+                <h3>Started B.Tech in Computer Science</h3>
+                <p class="org">SRM Institute of Science and Technology, Kattankulathur</p>
+                <p class="desc">Began my engineering journey, building strong foundations in data structures, algorithms, databases and software engineering while exploring web development and AI on the side.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">Feb – Apr 2024</span>
+                <h3>MERN Full Stack Intern</h3>
+                <p class="org">Webstack Academy</p>
+                <p class="desc">Built full-stack web applications with MongoDB, Express, React and Node.js. Learned REST API design, component-based UI development and how frontend and backend fit together in a real project.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">Apr – Jun 2024</span>
+                <h3>Zero Trust Cloud Security Intern</h3>
+                <p class="org">Zscaler</p>
+                <p class="desc">Studied Zero Trust architecture and cloud security principles, and earned the Zero Trust Certified Associate (ZTCA) certification.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">Jul – Sep 2024</span>
+                <h3>AI/ML Intern</h3>
+                <p class="org">AICTE – Google</p>
+                <p class="desc">Worked on machine learning fundamentals and model building with Google's AI tools, gaining hands-on experience in training, evaluating and improving ML models.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">Apr – Jun 2025</span>
+                <h3>Business Analyst Intern</h3>
+                <p class="org">Celonis</p>
+                <p class="desc">Used process mining to analyse business workflows, find inefficiencies and turn data into actionable insights.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">2026</span>
+                <h3>Research Paper – PEACE 2026</h3>
+                <p class="org">International Conference</p>
+                <p class="desc">Co-authored and presented a paper on Agentic AI for dental diagnosis, exploring how autonomous AI agents can assist clinicians in detecting and diagnosing dental conditions.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year">2026</span>
+                <h3>Graduated B.Tech CSE</h3>
+                <p class="org">SRM Institute of Science and Technology</p>
+                <p class="desc">Completed my degree in Computer Science and Engineering.</p>
+              </div>
+            </article>
+            <article class="milestone reveal">
+              <div class="milestone-card glass">
+                <span class="year year-now">Present</span>
+                <h3>Software Engineer Trainee</h3>
+                <p class="org">Psiog Digital &middot; IMPACT 2026</p>
+                <p class="desc">Training in software development and DevOps practices, including C++, SQL, Git and CI/CD pipelines with GitHub Actions. This website is built and deployed through that pipeline.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="journey"></section>
     <section id="interests"></section>
     <section id="family"></section>
     <section id="hobbies"></section>
