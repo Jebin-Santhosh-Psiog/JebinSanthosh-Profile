@@ -149,7 +149,110 @@
       </div>
     </section>
 
-    <section id="interests"></section>
+    <section id="interests" class="interests">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Personal Likings</p>
+          <h2 class="section-title">The things that keep me curious.</h2>
+        </header>
+        <div class="widgets">
+          <article class="widget w-music glass reveal" id="w-music">
+            <p class="w-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Music</p>
+            <div class="np">
+              <div class="np-art" aria-hidden="true"><span class="eq"><i></i><i></i><i></i><i></i></span></div>
+              <div class="np-info">
+                <p class="kicker">Now playing</p>
+                <h3>Film scores &amp; melodies</h3>
+                <p class="sub">On repeat whenever I code.</p>
+                <div class="np-bar" aria-hidden="true"><span></span></div>
+                <div class="np-time" aria-hidden="true"><span>1:24</span><span>-2:31</span></div>
+                <div class="np-ctrl">
+                  <button type="button" aria-label="Previous track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20L9 12l10-8v16zM5 19V5"/></svg></button>
+                  <button type="button" class="np-play" id="np-play" aria-label="Play" aria-pressed="false"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+                  <button type="button" aria-label="Next track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l10 8-10 8V4zM19 5v14"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <ul class="tags"><li>Film scores</li><li>Melody</li><li>Lo-fi</li></ul>
+          </article>
+
+          <article class="widget w-tech glass reveal">
+            <div class="mac-bar">
+              <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <h3 class="mac-title">Technology &mdash; zsh</h3>
+              <span class="bar-pad" aria-hidden="true"></span>
+            </div>
+            <div class="term">
+              <p><span class="pr">&#10140; ~</span>whoami</p>
+              <p class="out">software engineer &middot; chennai</p>
+              <p><span class="pr">&#10140; ~</span>cat interests.txt</p>
+              <p class="out">agentic-ai &nbsp;cloud &nbsp;devops</p>
+              <p><span class="pr">&#10140; ~</span>git push origin main</p>
+              <p class="ok">&#10003; deployed to github pages</p>
+              <p><span class="pr">&#10140; ~</span>ls skills/</p>
+              <p class="out">react &nbsp;node &nbsp;python &nbsp;aws &nbsp;azure &nbsp;docker</p>
+              <p><span class="pr">&#10140; ~</span>uptime</p>
+              <p class="out">learning since 2022, never stopped</p>
+              <p><span class="pr">&#10140; ~</span><span class="cursor"></span></p>
+            </div>
+          </article>
+
+          <article class="widget w-movies glass reveal">
+            <p class="w-label"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20M7 4v5M12 4v5M17 4v5"/></svg>Movies &amp; Series</p>
+            <h3>My top 5, on repeat</h3>
+            <ol class="posters">
+              <li class="poster p1"><span class="rank">1</span><span class="pt">Interstellar</span></li>
+              <li class="poster p2"><span class="rank">2</span><span class="pt">The Social Network</span></li>
+              <li class="poster p3"><span class="rank">3</span><span class="pt">Inception</span></li>
+              <li class="poster p4"><span class="rank">4</span><span class="pt">Dark</span></li>
+              <li class="poster p5"><span class="rank">5</span><span class="pt">Breaking Bad</span></li>
+            </ol>
+            <p class="w-note">Clever writing and visuals that stay with you after the credits roll.</p>
+          </article>
+
+          <article class="widget w-books glass reveal">
+            <p class="w-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>Books</p>
+            <div class="book">
+              <div class="cover" aria-hidden="true">Atomic Habits</div>
+              <div class="book-info">
+                <p class="kicker">Currently reading</p>
+                <h3>Atomic Habits</h3>
+                <p class="sub">James Clear</p>
+                <div class="prog" aria-hidden="true"><span></span></div>
+                <p class="small">62% complete</p>
+              </div>
+            </div>
+            <p class="w-note">Next up: The Pragmatic Programmer</p>
+          </article>
+
+          <article class="widget w-food glass reveal">
+            <p class="w-label notes-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>Food</p>
+            <h3>Comfort food list</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" checked><span>Chettinad biryani</span></label></li>
+              <li><label><input type="checkbox" checked><span>Filter coffee, always</span></label></li>
+              <li><label><input type="checkbox" checked><span>Crispy dosa</span></label></li>
+              <li><label><input type="checkbox"><span>Try authentic ramen</span></label></li>
+            </ul>
+          </article>
+
+          <article class="widget w-travel glass reveal">
+            <div class="map" aria-hidden="true">
+              <span class="pin pin-1"></span>
+              <span class="pin pin-2"></span>
+              <span class="pin pin-3"></span>
+              <span class="pin pin-home"></span>
+            </div>
+            <div class="map-info">
+              <p class="w-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>Travel</p>
+              <h3>Next stop: Ladakh</h3>
+              <p class="sub">Hill stations, beaches and new cities.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="family"></section>
     <section id="hobbies"></section>
   </main>
