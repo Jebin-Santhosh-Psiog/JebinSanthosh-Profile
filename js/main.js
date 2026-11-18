@@ -3,6 +3,7 @@ document.documentElement.classList.add("js");
 const nav = document.getElementById("navbar");
 const b = document.getElementById("hamburger");
 const m = document.getElementById("nav-links");
+const up = document.getElementById("to-top");
 
 const close = () => {
   m.classList.remove("open");
@@ -21,10 +22,13 @@ m.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 const onScroll = () => {
   const y = window.scrollY;
   nav.classList.toggle("scrolled", y > 20);
+  up.classList.toggle("show", y > 600);
 };
 
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
+
+up.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 const io = new IntersectionObserver(es => {
   es.forEach(e => {
@@ -200,3 +204,5 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") show(k - 1);
   if (e.key === "ArrowRight") show(k + 1);
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
