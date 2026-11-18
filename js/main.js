@@ -103,6 +103,16 @@ document.querySelectorAll(".desc").forEach(d => {
   d.after(t);
 });
 
+document.querySelectorAll(".contact").forEach(c => {
+  const f = () => c.classList.toggle("flipped");
+  c.addEventListener("click", f);
+  c.addEventListener("keydown", e => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault();
+    f();
+  });
+});
+
 const wm = document.getElementById("w-music");
 const pb = document.getElementById("np-play");
 
