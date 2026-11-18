@@ -121,3 +121,82 @@ pb.addEventListener("click", () => {
   pb.setAttribute("aria-pressed", String(on));
   pb.setAttribute("aria-label", on ? "Pause" : "Play");
 });
+
+const g = document.getElementById("gallery");
+const it = [...g.querySelectorAll(".gallery-item")];
+const fb = [...document.querySelectorAll(".side-item")];
+const hc = document.getElementById("h-count");
+const dk = [...document.querySelectorAll(".dock-icon")];
+const lb = document.getElementById("lightbox");
+const li = document.getElementById("lb-img");
+const lt = document.getElementById("lb-title");
+const lx = document.getElementById("lb-text");
+const lc = document.getElementById("lb-close");
+let k = 0;
+let src = null;
+
+fb.forEach(btn => btn.addEventListener("click", () => {
+  const f = btn.dataset.filter;
+  fb.forEach(x => x.classList.toggle("on", x === btn));
+  let n = 0;
+  it.forEach(x => {
+    const h = f !== "all" && x.dataset.cat !== f;
+    x.classList.toggle("hide", h);
+    if (!h) n++;
+  });
+  hc.textContent = `${n} ${n === 1 ? "item" : "items"}`;
+}));
+
+const show = i => {
+  k = (i + it.length) % it.length;
+  const im = it[k].querySelector("img");
+  li.src = im.src;
+  li.alt = im.alt;
+  lt.textContent = it[k].dataset.title;
+  lx.textContent = it[k].dataset.text;
+  dk.forEach((d, j) => d.classList.toggle("ran", j === k));
+};
+
+const open = (i, from) => {
+  src = from;
+  show(i);
+  lb.classList.add("open");
+  document.documentElement.classList.add("lock");
+  lc.focus();
+};
+
+const shut = () => {
+  lb.classList.remove("open");
+  document.documentElement.classList.remove("lock");
+  if (src) src.focus();
+};
+
+g.addEventListener("click", e => {
+  const c = e.target.closest(".gallery-item");
+  if (c) open(it.indexOf(c), c);
+});
+
+dk.forEach((d, i) => {
+  d.addEventListener("click", () => open(Number(d.dataset.i), d));
+  d.addEventListener("mouseenter", () => {
+    dk.forEach((x, j) => x.classList.toggle("near", Math.abs(j - i) === 1));
+  });
+});
+
+document.getElementById("dock").addEventListener("mouseleave", () => {
+  dk.forEach(x => x.classList.remove("near"));
+});
+
+lc.addEventListener("click", shut);
+document.getElementById("lb-prev").addEventListener("click", () => show(k - 1));
+document.getElementById("lb-next").addEventListener("click", () => show(k + 1));
+lb.addEventListener("click", e => {
+  if (e.target === lb) shut();
+});
+
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") shut();
+  if (e.key === "ArrowLeft") show(k - 1);
+  if (e.key === "ArrowRight") show(k + 1);
+});
