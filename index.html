@@ -3,36 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal profile of Jebin Santhosh J">
+  <meta name="description" content="Jebin Santhosh J — software engineer from Chennai working across full stack development, AI/ML and cloud.">
+  <meta name="theme-color" content="#14161c">
   <title>Jebin Santhosh J | Profile</title>
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <nav class="container nav-inner">
-      <a href="#hero" class="logo">JS</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner glass" aria-label="Main">
+      <a href="#hero" class="logo">Jebin<span>.</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#journey">Journey</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#family">Family</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#footer">Contact</a></li>
+        <li><a href="#footer" class="nav-cta">Contact</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
     </nav>
   </header>
 
   <main>
     <section id="hero" class="hero">
-      <div class="hero-content">
-        <img src="images/hero/profile.jpg" alt="Portrait of Jebin Santhosh J" class="hero-photo">
+      <div class="container hero-content">
+        <div class="avatar glass">
+          <img src="images/hero/profile.jpg" alt="Portrait of Jebin Santhosh J" class="hero-photo" width="168" height="168">
+        </div>
+        <p class="eyebrow">Software Engineer &middot; Chennai, India</p>
         <h1>Jebin Santhosh J</h1>
-        <p class="tagline">Full Stack Developer | AI/ML Enthusiast | Lifelong Learner</p>
-        <a href="#journey" class="btn">Explore My Journey &rarr;</a>
+        <p class="tagline"><span class="gradient-text">Full Stack Developer.</span> AI/ML Enthusiast. Lifelong Learner.</p>
+        <div class="hero-actions">
+          <a href="#journey" class="btn btn-primary">Explore My Journey &rarr;</a>
+          <a href="#footer" class="btn btn-glass glass">Get in touch</a>
+        </div>
+        <ul class="stats">
+          <li class="stat glass"><strong>4</strong><span>Internships</span></li>
+          <li class="stat glass"><strong>10+</strong><span>Certifications</span></li>
+          <li class="stat glass"><strong>1</strong><span>Research Paper</span></li>
+        </ul>
       </div>
+      <a href="#journey" class="scroll-hint" aria-label="Scroll to Professional Journey"><span></span></a>
     </section>
 
     <section id="journey"></section>
