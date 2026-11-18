@@ -102,3 +102,12 @@ document.querySelectorAll(".desc").forEach(d => {
   });
   d.after(t);
 });
+
+const wm = document.getElementById("w-music");
+const pb = document.getElementById("np-play");
+
+pb.addEventListener("click", () => {
+  const on = wm.classList.toggle("playing");
+  pb.setAttribute("aria-pressed", String(on));
+  pb.setAttribute("aria-label", on ? "Pause" : "Play");
+});
