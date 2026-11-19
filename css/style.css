@@ -984,6 +984,40 @@ section {
   transform: translateY(-6px) scale(1.04);
 }
 
+.poster {
+  overflow: hidden;
+}
+
+.poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.poster:hover img {
+  transform: scale(1.08);
+}
+
+.poster::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--poster-shade);
+}
+
+.rank,
+.pt {
+  position: relative;
+  z-index: 1;
+}
+
 .p1 {
   background: var(--poster-1);
 }
