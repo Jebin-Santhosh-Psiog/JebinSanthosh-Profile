@@ -122,9 +122,7 @@
   --cover-text: #3b2200;
   --notes-accent: #ffd60a;
   --notes-check: #3b2f00;
-  --map-bg: linear-gradient(118deg, transparent 46.5%, rgba(255, 255, 255, 0.9) 47%, rgba(255, 255, 255, 0.9) 48.5%, transparent 49%), linear-gradient(28deg, transparent 60%, rgba(255, 255, 255, 0.75) 60.5%, rgba(255, 255, 255, 0.75) 61.5%, transparent 62%), linear-gradient(155deg, #cfe6c0 0%, #e6eed4 50%, #a9d3ef 50.5%, #86bfe8 100%);
-  --pin: #ff3b30;
-  --pin-home: #0a84ff;
+  --map-bg: #dfe9e3;
 
   --poster-warm: linear-gradient(170deg, #ffd3a8 0%, #f39b78 55%, #a9493a 100%);
   --poster-shade: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%);
